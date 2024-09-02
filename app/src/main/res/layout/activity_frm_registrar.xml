@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context=".FrmRegistrar">
+
+
+    <EditText
+        android:id="@+id/TxtPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
+        android:ems="10"
+        android:hint="Ingrese su Contraseña"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#ffff"
+        app:layout_constraintBottom_toTopOf="@+id/BtnRegistrar"
+        app:layout_constraintStart_toStartOf="@+id/Txtuser01"
+        app:layout_constraintTop_toBottomOf="@+id/Txtuser01" />
+
+    <EditText
+        android:id="@+id/TxtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:hint="Ingrese su Nombre"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#ffff"
+        app:layout_constraintBottom_toTopOf="@+id/TxtApellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/Txtuser01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Ingrese su Usuario"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#ffff"
+        app:layout_constraintBottom_toTopOf="@+id/TxtPass"
+        app:layout_constraintStart_toStartOf="@+id/TxtApellido"
+        app:layout_constraintTop_toBottomOf="@+id/TxtApellido" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="182dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginBottom="37dp"
+        android:background="@null"
+        android:enabled="false"
+        android:fontFamily="@font/acme"
+        android:text="REGISTRATE"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/TxtNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/TxtApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:ems="10"
+        android:hint="Ingrese su Apellidos"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#ffff"
+        app:layout_constraintBottom_toTopOf="@+id/Txtuser01"
+        app:layout_constraintStart_toStartOf="@+id/TxtNombre"
+        app:layout_constraintTop_toBottomOf="@+id/TxtNombre" />
+
+    <Button
+        android:id="@+id/BtnRegistrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="219dp"
+        android:onClick="sRegistrar"
+        android:text="@string/Btnregistrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtPass" />
+</androidx.constraintlayout.widget.ConstraintLayout>
