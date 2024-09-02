@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">App Android Maps</string>
+    <string name="botonSiguiente">Siguiente</string>
+    <string name="buscador_label">buscador.....</string>
+    <string name="india">India</string>
+    <string name="country">country</string>
 </resources>
