@@ -1,6 +1,8 @@
 package com.example.appandroidmaps;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.view.View;
@@ -28,18 +30,28 @@ private EditText et_User, et_Pass;
         startActivity(sRegistrar);
     }
 
-    public void  IniciarSession (View view){
-            String sUser = et_User.getText().toString();
-            String sPass = et_Pass.getText().toString();
+    public void IniciarSession(View view) {
+        Administrador admin = new Administrador(this, "administracion", null, 1);
+        SQLiteDatabase bd = admin.getReadableDatabase();
+        String sUser = et_User.getText().toString();
+        String sPass = et_Pass.getText().toString();
 
-            if(!sUser.isEmpty() && !sPass.isEmpty()){
+        if (!sUser.isEmpty() && !sPass.isEmpty()) {
+            Cursor fila = bd.rawQuery(
+                    "SELECT * FROM seg_usuarios WHERE User = ? AND Pass = ?", new String[]{sUser, sPass});
+
+            if (fila.moveToFirst()) {
+                bd.close();
                 Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-            }else{
-                Toast.makeText(this ,"Ingrese su Usuario y Contraseña", Toast.LENGTH_SHORT).show();
+            } else {
+                bd.close();
+                Toast.makeText(this, "Usuario No Encontrado", Toast.LENGTH_SHORT).show();
             }
-
-
+        } else {
+            Toast.makeText(this, "Ingrese su Usuario y Contraseña", Toast.LENGTH_SHORT).show();
+        }
     }
+
 
 
 }
