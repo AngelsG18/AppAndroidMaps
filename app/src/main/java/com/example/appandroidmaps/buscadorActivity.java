@@ -36,26 +36,26 @@ public class buscadorActivity extends AppCompatActivity {
 
         // Inicializar la lista de ítems
         cardItemList = new ArrayList<>();
-        cardItemList.add(new CardItem(1, "Perú", R.drawable.india));
-        cardItemList.add(new CardItem(2, "México", R.drawable.india));
-        cardItemList.add(new CardItem(3, "Brasil", R.drawable.india));
-        cardItemList.add(new CardItem(4, "Argentina", R.drawable.india));
-        cardItemList.add(new CardItem(5, "Colombia", R.drawable.india));
-        cardItemList.add(new CardItem(1, "Perú", R.drawable.india));
-        cardItemList.add(new CardItem(2, "México", R.drawable.india));
-        cardItemList.add(new CardItem(3, "Brasil", R.drawable.india));
-        cardItemList.add(new CardItem(4, "Argentina", R.drawable.india));
-        cardItemList.add(new CardItem(5, "Colombia", R.drawable.india));
-        cardItemList.add(new CardItem(1, "Perú", R.drawable.india));
-        cardItemList.add(new CardItem(2, "México", R.drawable.india));
-        cardItemList.add(new CardItem(3, "Brasil", R.drawable.india));
-        cardItemList.add(new CardItem(4, "Argentina", R.drawable.india));
-        cardItemList.add(new CardItem(5, "Colombia", R.drawable.india));
-        cardItemList.add(new CardItem(1, "Perú", R.drawable.india));
-        cardItemList.add(new CardItem(2, "México", R.drawable.india));
-        cardItemList.add(new CardItem(3, "Brasil", R.drawable.india));
-        cardItemList.add(new CardItem(4, "Argentina", R.drawable.india));
-        cardItemList.add(new CardItem(5, "Colombia", R.drawable.india));
+        cardItemList.add(new CardItem(1, "Perú", R.drawable.peru));
+        cardItemList.add(new CardItem(2, "México", R.drawable.mexico));
+        cardItemList.add(new CardItem(3, "Brasil", R.drawable.brasil));
+        cardItemList.add(new CardItem(4, "Argentina", R.drawable.argentina));
+        cardItemList.add(new CardItem(5, "Colombia", R.drawable.colombia));
+        cardItemList.add(new CardItem(1, "Perú", R.drawable.peru));
+        cardItemList.add(new CardItem(2, "México", R.drawable.mexico));
+        cardItemList.add(new CardItem(3, "Brasil", R.drawable.brasil));
+        cardItemList.add(new CardItem(4, "Argentina", R.drawable.argentina));
+        cardItemList.add(new CardItem(5, "Colombia", R.drawable.colombia));
+        cardItemList.add(new CardItem(1, "Perú", R.drawable.peru));
+        cardItemList.add(new CardItem(2, "México", R.drawable.mexico));
+        cardItemList.add(new CardItem(3, "Brasil", R.drawable.brasil));
+        cardItemList.add(new CardItem(4, "Argentina", R.drawable.argentina));
+        cardItemList.add(new CardItem(5, "Colombia", R.drawable.colombia));
+        cardItemList.add(new CardItem(1, "Perú", R.drawable.peru));
+        cardItemList.add(new CardItem(2, "México", R.drawable.mexico));
+        cardItemList.add(new CardItem(3, "Brasil", R.drawable.brasil));
+        cardItemList.add(new CardItem(4, "Argentina", R.drawable.argentina));
+        cardItemList.add(new CardItem(5, "Colombia", R.drawable.colombia));
 
 
         // Configurar el ListView

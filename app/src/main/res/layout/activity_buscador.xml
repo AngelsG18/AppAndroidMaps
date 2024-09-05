@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FDFAFA"
+    android:background="@drawable/login"
     tools:context=".buscadorActivity">
 
 
@@ -34,7 +34,9 @@
         app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/buscador"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.200"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2dp"/>
 
     <ImageView
         android:id="@+id/imageView2"

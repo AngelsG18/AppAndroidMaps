@@ -25,4 +25,34 @@ private EditText et_User, et_Pass;
         et_User=(EditText)findViewById(R.id.Txtuser);
         et_Pass=(EditText)findViewById(R.id.TxtPassword);
     }
+
+    public void Registrar(View view) {
+        Intent sRegistrar = new Intent(this, FrmRegistrar.class);
+        startActivity(sRegistrar);
+    }
+
+    public void IniciarSession(View view) {
+        Administrador admin = new Administrador(this, "administracion", null, 1);
+        SQLiteDatabase bd = admin.getReadableDatabase();
+        String sUser = et_User.getText().toString();
+        String sPass = et_Pass.getText().toString();
+
+        if (!sUser.isEmpty() && !sPass.isEmpty()) {
+            Cursor fila = bd.rawQuery(
+                    "SELECT * FROM seg_usuarios WHERE User = ? AND Pass = ?", new String[]{sUser, sPass});
+
+            if (fila.moveToFirst()) {
+                bd.close();
+                Toast.makeText(this, "Usuario encontrado", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(this,buscadorActivity.class);
+                startActivity(intent);
+            } else {
+                bd.close();
+                Toast.makeText(this, "Usuario No Encontrado", Toast.LENGTH_SHORT).show();
+            }
+        } else {
+            Toast.makeText(this, "Ingrese su Usuario y Contraseña", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 }
