@@ -11,31 +11,24 @@
     android:padding="1dp"
     tools:context=".MainActivitymaps">
 
+    <!-- EditText para la barra de búsqueda -->
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Buscar lugar"
+        android:inputType="text"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:backgroundTint="#ffffff"
+        android:textColor="#000000"/>
+
+    <!-- Fragmento del mapa -->
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="510dp" />
-
-    <Button
-        android:id="@+id/btn_satelital"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#2437A3"
-        android:text="Satelite 🛰" />
-
-    <Button
-        android:id="@+id/btn_vista"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#3F9F43"
-        android:text="Mapita 🗺" />
-
-    <Button
-        android:id="@+id/btn_lima"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#00BCD4"
-        android:text="My House 🏠" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>
